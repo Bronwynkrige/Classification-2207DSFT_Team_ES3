@@ -30,12 +30,19 @@ import pickle
 # Data dependencies
 import pandas as pd
 
+# extract path information for raw data
+from pathlib import Path
+
 # Vectorizer
-news_vectorizer = open("resources/tfidfvect.pkl","rb")
-tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
+#news_vectorizer = open("resources/tfidfvect.pkl","rb")
+#tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
+
+# path information
+dir_path = Path(__file__).parent
+print(dir_path)
 
 # Load your raw data
-raw = pd.read_csv("resources/train.csv")
+raw = pd.read_csv(dir_path / "train.csv") 
 
 # The main function where we will build the actual app
 def main():
