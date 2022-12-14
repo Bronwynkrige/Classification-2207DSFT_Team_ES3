@@ -50,7 +50,7 @@ from pathlib import Path
 
 # Vectorizer
 #tweet_vectorizer = open("resources/tfidfvect.pkl","rb")
-tweet_vectorizer = open("mlr_vectorizer2.pkl", "rb")
+tweet_vectorizer = open("mlr_vectorizer.pkl", "rb")
 tweet_cv = joblib.load(tweet_vectorizer) # loading your vectorizer from the pkl file 
 
 # path information
@@ -131,6 +131,8 @@ def main():
 		# Creating a text box for user input
 		tweet_text = st.text_area("Enter Tweet Text Here (limited to 280 characters)","Typing...", max_chars=280)
 
+		# Load your .pkl file with the model of your choice + make predictions
+		# Try loading in multiple models to give the user a choice
 		st.markdown("Select model to use in prediction")
 		if st.checkbox("Logistic Regression"):
 			predictor = joblib.load(open(os.path.join("mlr_model_lg2.pkl"),"rb"))
@@ -150,18 +152,6 @@ def main():
 		if st.button("Classify"):
 			# Transforming user input with vectorizer
 			vect_text = tweet_cv.transform([tweet_text]).toarray()
-			# Load your .pkl file with the model of your choice + make predictions
-			# Try loading in multiple models to give the user a choice
-			if :
-				predictor = joblib.load(open(os.path.join("mlr_model2.pkl"),"rb"))
-			
-			def draw_count(label, df, init_filter_divider):
-				xmax = int(floor(df["count"].max()))
-				x = st.slider(label, 0, xmax, xmax // init_filter_divider)
-				df = df[df["count"] > x]
-				df = df.sort_values(by="count", ascending=False)
-				df
-				" "
 
 			# determine prediction
 			prediction = predictor.predict(vect_text)
