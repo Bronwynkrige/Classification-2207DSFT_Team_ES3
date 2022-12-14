@@ -91,7 +91,7 @@ def main():
 		st.markdown("1 Pro: the tweet supports the belief of man-made climate change.")
 		st.markdown("0 Neutral: the tweet neither supports nor refutes the belief of man-made climate change.")
 		st.markdown("-1 Anti: the tweet does not believe in man-made climate change Variable definitions")
-		
+
 		st.subheader("Raw Twitter data and label")
 		if st.checkbox('Show raw data'): # data is hidden if box is unchecked
 			st.write(raw[['sentiment', 'message']]) # will write the df to the page
@@ -100,7 +100,7 @@ def main():
 	if selection == "Prediction":
 		st.info("Prediction with ML Models")
 		# Creating a text box for user input
-		tweet_text = st.text_area("Enter Text","Type Here")
+		tweet_text = st.text_area("Enter Tweet Text Here (limited to 140 characters)","Typing...", max_chars=280)
 
 		if st.button("Classify"):
 			# Transforming user input with vectorizer
