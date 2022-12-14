@@ -49,8 +49,9 @@ import pandas as pd
 from pathlib import Path
 
 # Vectorizer
-news_vectorizer = open("resources/tfidfvect.pkl","rb")
-tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
+#tweet_vectorizer = open("resources/tfidfvect.pkl","rb")
+tweet_vectorizer = open("mlr_model.pkl", "rb")
+tweet_cv = joblib.load(tweet_vectorizer) # loading your vectorizer from the pkl file 
 
 # path information
 dir_path = Path(__file__).parent
