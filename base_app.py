@@ -38,7 +38,7 @@ import datetime
 import functools
 import pandas as pd
 import re
-import secrets_beta
+#import secrets_beta
 import time
 import tweepy
 
@@ -49,8 +49,8 @@ import pandas as pd
 from pathlib import Path
 
 # Vectorizer
-#news_vectorizer = open("resources/tfidfvect.pkl","rb")
-#tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
+news_vectorizer = open("resources/tfidfvect.pkl","rb")
+tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
 
 # path information
 dir_path = Path(__file__).parent
@@ -66,8 +66,21 @@ def main():
 	# Creates a main title and subheader on your page -
 	# these are static across all pages
 	st.set_page_config(page_icon="🐤", page_title="Twitter Sentiment Analyzer")
+
 	#st.title("Tweet Classifer")
 	st.subheader("Climate change tweet classification")
+
+	st.write('<base target="_blank">', unsafe_allow_html=True)
+
+	prev_time = [time.time()]
+
+	a, b = st.columns([1, 10])
+
+	with a:
+		st.text("")
+		st.image("logoOfficial.png", width=50)
+	with b:
+		st.title("Twitter Sentiment Classifier")
 
 	# Creating sidebar with selection box -
 	# you can create multiple pages this way
@@ -78,7 +91,11 @@ def main():
 	if selection == "Information":
 		st.info("General Information")
 		# You can read a markdown file from supporting resources folder
-		st.markdown("Some information here")
+		st.markdown("Many companies would like to determine how their customers perceive climate change and whether or not they believe it is a real threat.")
+		st.markdown("Knowledge of this would add to their market research efforts in gauging how their product/service may be received.")
+		st.markdown("An accurate and robust solution to this problem would give the companies access to a broad understanding of consumer sentiment.")
+		st.markdown("Sentiment that spans multiple demographic and geographics.")
+		st.markdown("As a result it increases a companies' insights and informing future marketing strategies for the betterment of consumer experience and company performance.")
 
 		st.subheader("Raw Twitter data and label")
 		if st.checkbox('Show raw data'): # data is hidden if box is unchecked
