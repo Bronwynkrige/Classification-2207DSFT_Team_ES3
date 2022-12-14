@@ -131,18 +131,55 @@ def main():
 		# Creating a text box for user input
 		tweet_text = st.text_area("Enter Tweet Text Here (limited to 280 characters)","Typing...", max_chars=280)
 
+		st.markdown("Select model to use in prediction")
+		if st.checkbox("Logistic Regression"):
+			predictor = joblib.load(open(os.path.join("mlr_model_lg2.pkl"),"rb"))
+		elif st.checkbox("K-Nearest Neighbour"):
+			predictor = joblib.load(open(os.path.join("mlr_model_nn2.pkl"), "rb"))
+		elif st.checkbox("Linear SVM"):
+			predictor = joblib.load(open(os.path.join("mlr_model_lsvm2.pkl"), "rb"))
+		elif st.checkbox("RBF SVM"):
+			predictor = joblib.load(open(os.path.join("mlr_model_rbf2.pkl"), "rb"))
+		elif st.checkbox("Decision Tree"):
+			predictor = joblib.load(open(os.path.join("mlr_model_dt2.pkl"), "rb"))
+		elif st.checkbox("Random Forest"):
+			predictor = joblib.load(open(os.path.join("mlr_model_rf2.pkl"), "rb"))
+		elif st.checkbox("AdaBoost"):
+			predictor = joblib.load(open(os.path.join("mlr_model_ab2.pkl"), "rb"))
+
 		if st.button("Classify"):
 			# Transforming user input with vectorizer
 			vect_text = tweet_cv.transform([tweet_text]).toarray()
 			# Load your .pkl file with the model of your choice + make predictions
 			# Try loading in multiple models to give the user a choice
-			predictor = joblib.load(open(os.path.join("mlr_model2.pkl"),"rb"))
+			if :
+				predictor = joblib.load(open(os.path.join("mlr_model2.pkl"),"rb"))
+			
+			def draw_count(label, df, init_filter_divider):
+				xmax = int(floor(df["count"].max()))
+				x = st.slider(label, 0, xmax, xmax // init_filter_divider)
+				df = df[df["count"] > x]
+				df = df.sort_values(by="count", ascending=False)
+				df
+				" "
+
+			# determine prediction
 			prediction = predictor.predict(vect_text)
 
 			# When model has successfully run, will print prediction
 			# You can use a dictionary or similar structure to make this output
 			# more human interpretable.
-			st.success("Text Categorized as: {}".format(prediction))
+			if prediction == 0:
+				sentiment = 'Neutral'
+			elif prediction == 2:
+        		sentiment = 'News'
+   			elif prediction == 1:
+        		sentiment = 'Pro'
+    		elif prediction == 0:
+        		sentiment = 'Neutral'
+    		else:
+        		sentiment = 'Anti'
+			st.success("Text Categorized as: {} ".format(prediction) + " " + sentiment)
 
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
