@@ -28,22 +28,19 @@ import os
 import pickle 
 
 # app requirements
-#from collections import defaultdict, namedtuple
-#from htbuilder import div, big, h2, styles
-#from htbuilder.units import rem
-#from math import floor
-#from textblob import TextBlob
-#import altair as alt
-#import datetime
-#import functools
-import pandas as pd
-#import re
-#import secrets_beta
 import time
-#import tweepy
 
 # Data dependencies
 import pandas as pd
+import numpy as np
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, AdaBoostClassifier
+from sklearn.svm import LinearSVC
+from sklearn.feature_extraction.text import CountVectorizer
 
 # extract path information for raw data
 from pathlib import Path
