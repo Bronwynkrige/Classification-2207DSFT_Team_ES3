@@ -28,19 +28,19 @@ import os
 import pickle 
 
 # app requirements
-from collections import defaultdict, namedtuple
+#from collections import defaultdict, namedtuple
 #from htbuilder import div, big, h2, styles
 #from htbuilder.units import rem
-from math import floor
-from textblob import TextBlob
-import altair as alt
-import datetime
-import functools
+#from math import floor
+#from textblob import TextBlob
+#import altair as alt
+#import datetime
+#import functools
 import pandas as pd
-import re
+#import re
 #import secrets_beta
 import time
-import tweepy
+#import tweepy
 
 # Data dependencies
 import pandas as pd
