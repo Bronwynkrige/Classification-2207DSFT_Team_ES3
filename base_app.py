@@ -27,6 +27,21 @@ import joblib
 import os
 import pickle 
 
+# app requirements
+from collections import defaultdict, namedtuple
+from htbuilder import div, big, h2, styles
+from htbuilder.units import rem
+from math import floor
+from textblob import TextBlob
+import altair as alt
+import datetime
+import functools
+import pandas as pd
+import re
+import secrets_beta
+import time
+import tweepy
+
 # Data dependencies
 import pandas as pd
 
@@ -50,7 +65,8 @@ def main():
 
 	# Creates a main title and subheader on your page -
 	# these are static across all pages
-	st.title("Tweet Classifer")
+	st.set_page_config(page_icon="🐤", page_title="Twitter Sentiment Analyzer")
+	#st.title("Tweet Classifer")
 	st.subheader("Climate change tweet classification")
 
 	# Creating sidebar with selection box -
