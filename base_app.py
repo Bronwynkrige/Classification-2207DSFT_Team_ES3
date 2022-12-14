@@ -162,13 +162,13 @@ def main():
 			if prediction == 0:
 				sentiment = 'Neutral'
 			elif prediction == 2:
-        		sentiment = 'News'
-   			elif prediction == 1:
-        		sentiment = 'Pro'
-    		elif prediction == 0:
-        		sentiment = 'Neutral'
-    		else:
-        		sentiment = 'Anti'
+				sentiment = 'News'
+			elif prediction == 1:
+				sentiment = 'Pro'
+			elif prediction == 0:
+				sentiment = 'Neutral'
+			else:
+				sentiment = 'Anti'
 			st.success("Text Categorized as: {} ".format(prediction) + " " + sentiment)
 
 # Required to let Streamlit instantiate our web app.  
