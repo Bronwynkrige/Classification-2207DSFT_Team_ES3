@@ -73,10 +73,10 @@ def main():
 
 	# Creating sidebar with selection box -
 	# you can create multiple pages this way
-	options = ["Prediction", "Information"]
+	options = ["Information", "Sentiment Classification", "Model Information", "Prediction", "Raw Data"]
 	selection = st.sidebar.selectbox("Choose Option", options)
 
-	# Building out the "Information" page
+	# Building out the Information page
 	if selection == "Information":
 		st.info("General Information")
 		# You can read a markdown file from supporting resources folder
@@ -85,18 +85,47 @@ def main():
 		st.markdown("An accurate and robust solution to this problem would give the companies access to a broad understanding of consumer sentiment.")
 		st.markdown("Sentiment that spans multiple demographic and geographics.")
 		st.markdown("As a result it increases a companies' insights and informing future marketing strategies for the betterment of consumer experience and company performance.")
-		st.markdown("")
+	
+	# Building out the Sentiment Classification page
+	if selection == "Sentiment Classification":
+		st.info("General Information")
 		st.markdown("Building a Machine Learning model that is able to classify whether or not a person believes in climate change, based on their novel tweet data. The tweets belonging to any of the following class descriptions:")
 		st.markdown("2 News: the tweet links to factual news about climate change.")
 		st.markdown("1 Pro: the tweet supports the belief of man-made climate change.")
 		st.markdown("0 Neutral: the tweet neither supports nor refutes the belief of man-made climate change.")
 		st.markdown("-1 Anti: the tweet does not believe in man-made climate change Variable definitions")
 
-		st.subheader("Raw Twitter data and label")
+	# Building out the Model Information page
+	if selection == "Model Information":
+		st.info("Model Information")
+		st.markdown("Multiple types of classification models have been used.")
+		st.markdown("A model can be known as a classifier.")
+		st.markdown("")
+		st.markdown("1. Logistic Regression")
+		st.markdown("Applies the sigmoid(logistic) function to keep the outcome a probabilistic value between 0 and 1.")
+		st.markdown("")
+		st.markdown("2. K-Nearest Neighbour.")
+		st.markdown("Uses an algorithm that implements classification based on voting by the nearest k-neighbours of the target point.")
+		st.markdown("")
+		st.markdown("3. SVM")
+		st.markdown("Categorizes the data with the separator drawn as a hyperplane.")
+		st.markdown("")
+		st.markdown("4. Decision Tree")
+		st.markdown("Uses a tree structure and split points to classify the data.")
+		st.markdown("")
+		st.markdown("5. Random Forest")
+		st.markdown("Constructs a multitude of decision trees during training.")
+		st.markdown("")
+		st.markdown("6. AdaBoost")
+		st.markdown("Builds the model on the training data and then a second model to fix errors present in the first model by re-assigning weights to each instance, with higher weights assigned to incorrectly classified instances.")
+	
+	# Building out the Raw Data page
+	if selection == "Raw Data":
+		st.info("Raw Twitter Data")
 		if st.checkbox('Show raw data'): # data is hidden if box is unchecked
 			st.write(raw[['sentiment', 'message']]) # will write the df to the page
 
-	# Building out the predication page
+	# Building out the Predication page
 	if selection == "Prediction":
 		st.info("Prediction with ML Models")
 		# Creating a text box for user input
