@@ -100,7 +100,7 @@ def main():
 	if selection == "Prediction":
 		st.info("Prediction with ML Models")
 		# Creating a text box for user input
-		tweet_text = st.text_area("Enter Tweet Text Here (limited to 140 characters)","Typing...", max_chars=280)
+		tweet_text = st.text_area("Enter Tweet Text Here (limited to 280 characters)","Typing...", max_chars=280)
 
 		if st.button("Classify"):
 			# Transforming user input with vectorizer
