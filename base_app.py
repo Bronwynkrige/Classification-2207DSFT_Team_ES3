@@ -67,7 +67,7 @@ def main():
 	# these are static across all pages
 	st.set_page_config(page_icon="🐤", page_title="Twitter Sentiment Analyzer")
 
-	#st.title("Tweet Classifer")
+	st.title("Twitter Sentiment Analyzer") #st.title("Tweet Classifer")
 	st.subheader("Climate change tweet classification")
 
 	st.write('<base target="_blank">', unsafe_allow_html=True)
