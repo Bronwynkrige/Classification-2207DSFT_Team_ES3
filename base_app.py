@@ -70,18 +70,6 @@ def main():
 	st.title("Twitter Sentiment Analyzer") #st.title("Tweet Classifer")
 	st.subheader("Climate change tweet classification")
 
-	st.write('<base target="_blank">', unsafe_allow_html=True)
-
-	prev_time = [time.time()]
-
-	a, b = st.columns([1, 10])
-
-	with a:
-		st.text("")
-		st.image("logoOfficial.png", width=50)
-	with b:
-		st.title("Twitter Sentiment Classifier")
-
 	# Creating sidebar with selection box -
 	# you can create multiple pages this way
 	options = ["Prediction", "Information"]
