@@ -86,6 +86,8 @@ def main():
 		st.markdown("An accurate and robust solution to this problem would give the companies access to a broad understanding of consumer sentiment.")
 		st.markdown("Sentiment that spans multiple demographic and geographics.")
 		st.markdown("As a result it increases a companies' insights and informing future marketing strategies for the betterment of consumer experience and company performance.")
+		image = Image.open('twitter_image.png')
+		st.image(image, caption = "Twitter enables globabl conversations on climate change")
 	
 	# Building out the Sentiment Classification page
 	if selection == "Sentiment Classification":
@@ -97,8 +99,8 @@ def main():
     				'Sentiment Interpretation': ['Anti', 'Neutral', 'Pro', 'News'],
 					'Description': ['The tweet does not believe in man-made climate change Variable definitions', 'The tweet neither supports nor refutes the belief of man-made climate change.', 'The tweet supports the belief of man-made climate change.', 'The tweet links to factual news about climate change.']
 		}))
-		image = Image.open('twitter_image.png')
-		st.image(image, caption = "Twitter enables globabl conversations on climate change")
+		image = Image.open('sentiment_analysis.png')
+		st.image(image, caption = "Summary of sentiment classifications based on model training data")
 
 	# Building out the Model Information page
 	if selection == "Model Information":
