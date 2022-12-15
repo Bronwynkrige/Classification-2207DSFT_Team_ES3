@@ -96,7 +96,7 @@ def main():
 	# Building out the Model Information page
 	if selection == "Model Information":
 		st.info("App Model Information")
-		st.markdown("Multiple types of classification models have been used.")
+		st.markdown("A range of classification models has been used.")
 		st.markdown("A model can be known as a classifier.")
 		st.markdown("")
 		st.markdown("1. Logistic Regression")
