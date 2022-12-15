@@ -100,7 +100,7 @@ def main():
 					'Description': ['The tweet does not believe in man-made climate change Variable definitions', 'The tweet neither supports nor refutes the belief of man-made climate change.', 'The tweet supports the belief of man-made climate change.', 'The tweet links to factual news about climate change.']
 		}))
 		image = Image.open('sentiment_analysis.png')
-		st.image(image, caption = "Summary of sentiment classifications based on model training data")
+		st.image(image, caption = "Summary of sentiment classifications based on model training data", width = 400)
 
 	# Building out the Model Information page
 	if selection == "Model Information":
