@@ -134,12 +134,12 @@ def main():
 		st.markdown("Select model to use in prediction")
 		if st.checkbox("Logistic Regression"):
 			predictor = joblib.load(open(os.path.join("mlr_model_lg2.pkl"),"rb"))
-		elif st.checkbox("K-Nearest Neighbour"):
-			predictor = joblib.load(open(os.path.join("mlr_model_nn2.pkl"), "rb"))
-		elif st.checkbox("Linear SVM"):
-			predictor = joblib.load(open(os.path.join("mlr_model_lsvm2.pkl"), "rb"))
-		elif st.checkbox("RBF SVM"):
-			predictor = joblib.load(open(os.path.join("mlr_model_rbf2.pkl"), "rb"))
+		#elif st.checkbox("K-Nearest Neighbour"):
+		#	predictor = joblib.load(open(os.path.join("mlr_model_nn2.pkl"), "rb"))
+		#elif st.checkbox("Linear SVM"):
+		#	predictor = joblib.load(open(os.path.join("mlr_model_lsvm2.pkl"), "rb"))
+		#elif st.checkbox("RBF SVM"):
+		#	predictor = joblib.load(open(os.path.join("mlr_model_rbf2.pkl"), "rb"))
 		elif st.checkbox("Decision Tree"):
 			predictor = joblib.load(open(os.path.join("mlr_model_dt2.pkl"), "rb"))
 		elif st.checkbox("Random Forest"):
