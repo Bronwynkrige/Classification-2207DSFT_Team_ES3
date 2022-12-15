@@ -33,6 +33,7 @@ import time
 # Data dependencies
 import pandas as pd
 import numpy as np
+import scipy
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
