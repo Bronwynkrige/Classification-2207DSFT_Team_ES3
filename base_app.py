@@ -89,12 +89,16 @@ def main():
 	
 	# Building out the Sentiment Classification page
 	if selection == "Sentiment Classification":
-		st.info("General Information")
+		st.info("Categorise the tweets")
 		st.markdown("Building a Machine Learning model that is able to classify whether or not a person believes in climate change, based on their novel tweet data. The tweets belonging to any of the following class descriptions:")
 		st.markdown("2 News: the tweet links to factual news about climate change.")
 		st.markdown("1 Pro: the tweet supports the belief of man-made climate change.")
 		st.markdown("0 Neutral: the tweet neither supports nor refutes the belief of man-made climate change.")
 		st.markdown("-1 Anti: the tweet does not believe in man-made climate change Variable definitions")
+		st.markdown("")
+		st.markdown("")
+		image = Image.open('twitter_image.png')
+		st.image(image, caption = "Twitter enables globabl conversations on climate change")
 
 	# Building out the Model Information page
 	if selection == "Model Information":
