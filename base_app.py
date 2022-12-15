@@ -97,7 +97,6 @@ def main():
     				'Sentiment Interpretation': ['Anti', 'Neutral', 'Pro', 'News'],
 					'Description': ['The tweet does not believe in man-made climate change Variable definitions', 'The tweet neither supports nor refutes the belief of man-made climate change.', 'The tweet supports the belief of man-made climate change.', 'The tweet links to factual news about climate change.']
 		}))
-		st.markdown("")
 		image = Image.open('twitter_image.png')
 		st.image(image, caption = "Twitter enables globabl conversations on climate change")
 
