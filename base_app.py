@@ -43,6 +43,9 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier,
 from sklearn.svm import LinearSVC
 from sklearn.feature_extraction.text import CountVectorizer
 
+# display images
+from PIL import Image
+
 # extract path information for raw data
 from pathlib import Path
 
@@ -110,7 +113,11 @@ def main():
 		st.markdown("")
 		st.markdown("4. AdaBoost")
 		st.markdown("Builds the model on the training data and then a second model to fix errors present in the first model by re-assigning weights to each instance, with higher weights assigned to incorrectly classified instances.")
-	
+		st.markdown("")
+		st.markdown("")
+		image = Image.open('Model_Performance.png')
+		st.image(image, caption = "Summary of model performance statistics")
+
 	# Building out the Raw Data page
 	if selection == "Raw Data":
 		st.info("Raw Twitter Data")
