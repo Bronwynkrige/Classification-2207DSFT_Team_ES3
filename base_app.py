@@ -95,26 +95,20 @@ def main():
 
 	# Building out the Model Information page
 	if selection == "Model Information":
-		st.info("Model Information")
+		st.info("App Model Information")
 		st.markdown("Multiple types of classification models have been used.")
 		st.markdown("A model can be known as a classifier.")
 		st.markdown("")
 		st.markdown("1. Logistic Regression")
 		st.markdown("Applies the sigmoid(logistic) function to keep the outcome a probabilistic value between 0 and 1.")
 		st.markdown("")
-		st.markdown("2. K-Nearest Neighbour.")
-		st.markdown("Uses an algorithm that implements classification based on voting by the nearest k-neighbours of the target point.")
-		st.markdown("")
-		st.markdown("3. SVM")
-		st.markdown("Categorizes the data with the separator drawn as a hyperplane.")
-		st.markdown("")
-		st.markdown("4. Decision Tree")
+		st.markdown("2. Decision Tree")
 		st.markdown("Uses a tree structure and split points to classify the data.")
 		st.markdown("")
-		st.markdown("5. Random Forest")
+		st.markdown("3. Random Forest")
 		st.markdown("Constructs a multitude of decision trees during training.")
 		st.markdown("")
-		st.markdown("6. AdaBoost")
+		st.markdown("4. AdaBoost")
 		st.markdown("Builds the model on the training data and then a second model to fix errors present in the first model by re-assigning weights to each instance, with higher weights assigned to incorrectly classified instances.")
 	
 	# Building out the Raw Data page
