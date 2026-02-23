@@ -1,3 +1,3 @@
 # Classification-2207DSFT_Team_ES3
 
-This is a Twitter Sentiment Analysis Progect.
+This is a Twitter Sentiment Analysis Project.
